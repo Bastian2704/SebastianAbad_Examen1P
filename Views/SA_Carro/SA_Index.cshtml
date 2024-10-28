@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<SebastianAbad_Examen1P.Models.SA_Carro>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "SA_Index";
 }
 
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="SA_Create">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -55,9 +55,9 @@
                 @Html.DisplayFor(modelItem => item.SA_FechaEntrega)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.SA_CARROID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.SA_CARROID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.SA_CARROID">Delete</a>
+                <a asp-action="SA_Edit" asp-route-id="@item.SA_CARROID">Edit</a> |
+                <a asp-action="SA_Details" asp-route-id="@item.SA_CARROID">Details</a> |
+                <a asp-action="SA_Delete" asp-route-id="@item.SA_CARROID">Delete</a>
             </td>
         </tr>
 }

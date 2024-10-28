@@ -20,13 +20,13 @@ namespace SebastianAbad_Examen1P.Controllers
         }
 
         // GET: SA_Carro
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> SA_Index()
         {
             return View(await _context.SA_Carro.ToListAsync());
         }
 
         // GET: SA_Carro/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> SA_Details(int? id)
         {
             if (id == null)
             {
@@ -44,7 +44,7 @@ namespace SebastianAbad_Examen1P.Controllers
         }
 
         // GET: SA_Carro/Create
-        public IActionResult Create()
+        public IActionResult SA_Create()
         {
             return View();
         }
@@ -60,13 +60,13 @@ namespace SebastianAbad_Examen1P.Controllers
             {
                 _context.Add(sA_Carro);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(SA_Index));
             }
             return View(sA_Carro);
         }
 
         // GET: SA_Carro/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> SA_Edit(int? id)
         {
             if (id == null)
             {
@@ -111,13 +111,13 @@ namespace SebastianAbad_Examen1P.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(SA_Index));
             }
             return View(sA_Carro);
         }
 
         // GET: SA_Carro/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> SA_Delete(int? id)
         {
             if (id == null)
             {
@@ -135,7 +135,7 @@ namespace SebastianAbad_Examen1P.Controllers
         }
 
         // POST: SA_Carro/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost, ActionName("SA_Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
@@ -146,7 +146,7 @@ namespace SebastianAbad_Examen1P.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(SA_Index));
         }
 
         private bool SA_CarroExists(int id)

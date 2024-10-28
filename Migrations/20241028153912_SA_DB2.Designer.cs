@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SebastianAbad_Examen1P.Data;
 
@@ -11,9 +12,11 @@ using SebastianAbad_Examen1P.Data;
 namespace SebastianAbad_Examen1P.Migrations
 {
     [DbContext(typeof(SebastianAbad_Examen1PContext))]
-    partial class SebastianAbad_Examen1PContextModelSnapshot : ModelSnapshot
+    [Migration("20241028153912_SA_DB2")]
+    partial class SA_DB2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

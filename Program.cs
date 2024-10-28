@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using SebastianAbad_Examen1P.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<SebastianAbad_Examen1PContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SebastianAbad_Examen1PContext") ?? throw new InvalidOperationException("Connection string 'SebastianAbad_Examen1PContext' not found.")));
@@ -9,6 +10,8 @@ builder.Services.AddDbContext<SebastianAbad_Examen1PContext>(options =>
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
