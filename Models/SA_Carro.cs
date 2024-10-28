@@ -8,7 +8,7 @@ namespace SebastianAbad_Examen1P.Models
     {
         [KeyAttribute]
         public int SA_CARROID { get; set; }
-        [StringLength(1)]
+      
         public int SA_MecanicosAcargo { get; set; }
         [MaxLength(30)]
         [Required]
